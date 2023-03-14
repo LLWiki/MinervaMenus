@@ -1,0 +1,24 @@
+{
+	"name": "MinervaMenus",
+	"author": [
+		"[[User:Bhsd|Bhsd]]",
+		"[[User:Func|Func]]"
+	],
+	"descriptionmsg": "minervamenus-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "others",
+	"requires": {
+		"MediaWiki": ">= 1.34.0",
+		"skins": {
+			"MinervaNeue": "*"
+		}
+	},
+	"AutoloadClasses": {
+		"MinervaMenus": "includes/MinervaMenus.php",
+		"FontAwesomeMenuEntry": "includes/FontAwesomeMenuEntry.php"
+	},
+	"Hooks": {
+		"MobileMenu": "MinervaMenus::onMobileMenu"
+	},
+	"manifest_version": 2
+}
