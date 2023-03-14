@@ -1,9 +1,10 @@
 {
 	"name": "MinervaMenus",
 	"author": [
-		"[[User:Bhsd|Bhsd]]",
-		"[[User:Func|Func]]"
+		"[https://llwiki.org/zh/User:Bhsd Bhsd]",
+		"[https://llwiki.org/zh/User:Func Func]"
 	],
+	"url": "https://github.com/LLWiki/MinervaMenus",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
