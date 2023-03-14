@@ -1,0 +1,8 @@
+#mw-mf-page-left .fa::before,
+#mw-mf-page-left .fas::before,
+#mw-mf-page-left .far::before,
+#mw-mf-page-left .fab::before {
+	font-size: 1.25em;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}

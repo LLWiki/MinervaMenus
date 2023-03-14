@@ -53,10 +53,10 @@ class MinervaMenus {
 
 		$context = RequestContext::getMain();
 		$out = $context->getOutput();
-		// TODO: Register this properly.
-		// FIXME: This hook was called too late in 1.35.
+		// TODO: Register fontawesome properly.
+		// FIXME: This hook was called too late to add styles in 1.35.
 		//  Upgrade to higher versions and use the new hook should fix this.
-		$out->addModuleStyles( [ 'fontawesome' ] );
+		$out->addModuleStyles( [ 'fontawesome', 'ext.minervamenus.styles' ] );
 		if ( $out->isArticleRelated() ) {
 			$title = $context->getTitle();
 			$thispage = $title->getPrefixedDBkey();

@@ -20,5 +20,17 @@
 	"Hooks": {
 		"MobileMenu": "MinervaMenus::onMobileMenu"
 	},
+	"ResourceModules": {
+		"ext.minervamenus.styles": {
+			"styles": "menu.css",
+			"targets": [
+				"mobile"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "MinervaMenus/resources"
+	},
 	"manifest_version": 2
 }
