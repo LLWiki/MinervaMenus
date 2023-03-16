@@ -3,6 +3,21 @@
 class MinervaMenus {
 
 	/**
+	 * Add the style modules, because the MobileMenu hook was called too late
+	 * to add resource loader modules since 1.35.
+	 *
+	 * @param OutputPage $out
+	 * @param Skin $skin
+	 */
+	public static function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
+		if ( $skin->getSkinName() !== 'minerva' ) {
+			return;
+		}
+		// FIXME: Register fontawesome properly.
+		$out->addModuleStyles( [ 'fontawesome', 'ext.minervamenus.styles' ] );
+	}
+
+	/**
 	 * @param string $groupName
 	 * @param array $group
 	 */
@@ -52,12 +67,7 @@ class MinervaMenus {
 		}
 
 		$context = RequestContext::getMain();
-		$out = $context->getOutput();
-		// TODO: Register fontawesome properly.
-		// FIXME: This hook was called too late to add styles in 1.35.
-		//  Upgrade to higher versions and use the new hook should fix this.
-		$out->addModuleStyles( [ 'fontawesome', 'ext.minervamenus.styles' ] );
-		if ( $out->isArticleRelated() ) {
+		if ( $context->getOutput()->isArticleRelated() ) {
 			$title = $context->getTitle();
 			$thispage = $title->getPrefixedDBkey();
 			$group->insertEntry(

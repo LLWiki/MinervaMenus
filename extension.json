@@ -18,6 +18,7 @@
 		"FontAwesomeMenuEntry": "includes/FontAwesomeMenuEntry.php"
 	},
 	"Hooks": {
+		"BeforePageDisplay": "MinervaMenus::onBeforePageDisplay",
 		"MobileMenu": "MinervaMenus::onMobileMenu"
 	},
 	"ResourceModules": {
