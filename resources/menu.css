@@ -5,4 +5,7 @@
 	font-size: 1.25em;
 	margin-right: 0.5em;
 	vertical-align: middle;
+	display: inline-block;
+	width: 20px;
+	text-align: center;
 }
